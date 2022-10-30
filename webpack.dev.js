@@ -14,14 +14,14 @@ module.exports = merge(common, {
     minimize: false,
   },
 
-  cashe: true,
+  cache: true,
 
   output: {
     publicPath: `http://localhost:${targetPort}/`,
   },
 
   devServer: {
-    static: path.json(__dirname, 'public'),
+    static: path.join(__dirname, 'public'),
     port: targetPort,
     historyApiFallback: true,
     headers: {

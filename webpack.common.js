@@ -37,7 +37,7 @@ module.exports = {
     filename: 'static/bundles/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     publicPath,
-    chunkFilesname: 'static/bundles/[id].[contenthash].js',
+    chunkFilename: 'static/bundles/[id].[contenthash].js',
     library: {type: 'umd'},
     clean: true,
   },
