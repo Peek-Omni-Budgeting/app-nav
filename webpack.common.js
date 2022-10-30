@@ -17,7 +17,7 @@ module.exports = {
   entry: {
     main: {
       filename: 'main.[contenthash].js',
-      import: './src/index.ts',
+      import: './src/index.tsx',
     },
     ssEntry: {
       filename: 'ssEntry.js',
@@ -112,11 +112,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
-    new CopyPlugin({
-      patterns: [
-        { from: 'public', to: '.', globOptions: { ignore: '**/index.html' } },
-      ]
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     { from: 'public', to: '.', globOptions: { ignore: '**/index.html' } },
+    //   ]
+    // }),
     new ForkTsCheckerPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: process.env.STATS || 'disabled',
